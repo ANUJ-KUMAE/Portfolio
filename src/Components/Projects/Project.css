@@ -1,0 +1,385 @@
+#Tab-Container
+{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    padding: 1.5rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+     
+}
+
+
+
+#Tab-Container h1
+{
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.Tab-Blocks
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 34%;
+    border: 6px solid var(--black); 
+    padding: 10px;
+    border-radius: 5rem;
+}
+
+.Tab-Blocks::before 
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 390px;
+    top: 1rem;
+    left: 0px;
+    background: url("../../Images/Project-Background.jpg") no-repeat center center/cover;
+    z-index: -2;
+    opacity: 0.8;
+
+} 
+
+.tab 
+{
+    position: relative;
+    cursor: pointer;
+    border: 4px solid var(--black);
+    padding: 10px;
+    margin: 2px;
+    border-radius: 20px;
+    background: var(--orange);
+}
+
+
+
+.active-tabs
+{
+   background: white;
+   border-bottom: 1px solid transparent;
+}
+
+/* .active-tabs::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%); 
+    width: calc(100%+2px);
+    height: 5px;
+} */
+
+button
+{
+    border: none;
+}
+
+.content
+{
+    padding: 20px;
+    display: none;
+}
+
+.Content-tab
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+     margin-bottom: 2rem;
+}
+
+
+.active-content
+{
+    display: block;
+}  
+
+.Content-tab .All-Project
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    
+}
+
+.Project-lists
+{
+    background-color:rgb(89, 51, 126);
+    width: 95%;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   border-radius: 10px;
+
+   
+}
+
+  .Project-lists img
+{
+    width: 100%;
+    height: 75%;
+     border-radius: 10px;
+   
+} 
+
+
+.blur4
+{
+    position: absolute;
+    width: 22rem;
+    height: 12rem;
+    border-radius: 50%;
+    top: 78rem;
+    left: 35rem;
+    z-index: -8;
+    background: #e765e7;
+    filter: blur(60px);
+}
+
+.project-name 
+{
+    
+    color: black;
+    margin: 1rem;
+}
+
+
+.Fa-Arrow 
+{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 6px;
+    color: black;
+}
+
+
+/*-------Responsive-------*/
+
+@media screen and (max-width:440px) 
+{
+    .blur4
+    {
+        width: 18rem;
+        height: 10rem;
+        top: 135rem;
+        left: 5rem;
+    }   
+    #Tab-Container
+    {
+        padding: 2px;
+    } 
+} 
+
+@media screen and (max-width:1050px)
+{
+    .Tab-Blocks
+    {
+        width: 55%;
+    }
+    .blur4
+    {
+        top: 75rem;
+        left: 24rem;
+    } 
+
+    .tab
+    {
+        font-size: 1.5rem;
+    }
+
+
+    h2 
+    {
+        margin-bottom: 1rem;
+    }
+
+    .work-title 
+    {
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width:840px) 
+{
+    .blur4
+    {
+        width: 20rem;
+        height: 11rem;
+        top: 123rem;
+        left: 12rem;
+    }   
+    #Tab-Container
+    {
+        padding: 1rem;
+    }  
+    
+    .Tab-Blocks
+    {
+        width: 70%;
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width:770px)
+{
+    .blur4 
+    {
+        top: 118rem;
+    }    
+}
+
+@media screen and (max-width:550px)
+{
+   
+    .Tab-Blocks
+    {
+        width: 85%;
+    }
+    .blur4
+    {
+        top: 122rem;
+        left: 10rem;
+    }
+
+    .tab{
+        font-size: 1rem;
+    }
+
+    h2 
+    {
+        font-size: 1rem;
+    }
+    
+
+    .Content-tab .All-Project
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #Tab-Container h1
+    {
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    .Content-tab 
+    {
+        margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-width:450px)
+{
+    .blur4{
+        width: 15rem;
+        left: 8rem;
+    }
+
+    .Content-tab .All-Project
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .Tab-Blocks
+    {
+        gap: 0.5rem;
+    }
+
+    .Project-lists
+    {
+        margin-top: 1rem;
+    }
+    
+}
+
+@media screen and (width:412px)
+{
+    #Tab-Container
+    {
+        padding: 1.5rem;
+    }  
+}
+
+@media screen and (max-width:392px)
+{
+    .blur4
+    {
+        width: 12rem;
+    } 
+
+    .Content-tab 
+    {
+        margin-top: 1rem;
+    }
+
+    .Tab-Blocks 
+    {
+        width: 90%;
+        padding: 6px 10px;
+    }
+}
+
+@media screen and (max-width:370px)
+{
+   .Tab-Blocks 
+   {
+      width: 96%;
+   }    
+}
+
+@media screen and (max-width:290px)
+{
+   .blur4
+   {
+    width: 10rem;
+    left: 5rem;
+    top:95rem;
+   }   
+   
+   .Tab-Blocks
+   {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-radius: 2rem;
+      gap:0.2rem;
+      width: 99%;
+   }
+
+   .tab
+   {
+      font-size: 0.8rem;
+      border: 2px solid black;
+   }
+
+   .Content-tab 
+   {
+     margin-top: 0;
+   }
+
+
+}
+
+

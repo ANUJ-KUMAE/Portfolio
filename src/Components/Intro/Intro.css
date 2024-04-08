@@ -1,0 +1,311 @@
+#Intro-container {
+  height: 75vh;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  padding: 2.5rem 4.5rem;
+}
+
+.I-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 5rem;
+}
+
+.I-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.I-name > :nth-child(1) {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+
+.I-name > :nth-child(2) {
+  color: var(--yellow);
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.I-name .second-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.I-name .second-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.I-name > :nth-child(3) {
+  color: var(--black);
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.button1 {
+  margin-left: 0;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(212px);
+  z-index: -8;
+  top: 14%;
+  left: 64%;
+  filter: blur(72px);
+}
+
+.blur1 {
+  position: absolute;
+  width: 21rem;
+  height: 17rem;
+  border-radius: 50%;
+  background: #ccccff;
+  z-index: -8;
+  top: 50%;
+  left: 50%;
+  filter: blur(70px);
+}
+
+.right-image {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.boy {
+  position: absolute;
+  transform: translate(-5%, -50%);
+  animation: moveRight 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translate(-5%, -50%);
+  }
+  100% {
+    transform: translate(5%, -50%);
+  }
+}
+
+/*----------Responsive-------------*/
+
+@media screen and (max-width: 1050px) {
+  #Intro-container {
+    gap: 5rem;
+    height: 50%;
+    margin-top: 2rem;
+  }
+
+  .blur {
+    width: 20rem;
+    height: 12rem;
+    top: 10%;
+  }
+  .blur1 {
+    top: 25%;
+    left: 45%;
+    width: 19rem;
+    height: 15rem;
+  }
+
+  .I-left {
+    margin: auto 3rem;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .I-left {
+    margin: auto 2rem;
+  }
+}
+
+@media screen And (max-width: 840px) {
+  #Intro-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .I-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blur {
+    top: 55%;
+    left: 42%;
+  }
+
+  .blur1 {
+    top: 78%;
+    left: 13%;
+  }
+
+  .I-right img {
+    width: 130%;
+  }
+
+  .boy {
+    animation: none;
+    transform: none;
+    position: static;
+  }
+
+  .I-name > :nth-child(1) {
+    font-size: 2.8rem;
+  }
+
+  .I-name > :nth-child(2) {
+    font-size: 2.5rem;
+  }
+
+  .I-name > :nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  .button1 {
+    padding: 18px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .blur {
+    top: 55%;
+  }
+  .blur1 {
+    top: 85%;
+  }
+
+  .I-name > :nth-child(1) {
+    font-size: 2.3rem;
+  }
+
+  .I-name > :nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .I-name > :nth-child(3) {
+    font-size: 1rem;
+  }
+
+  .button1 {
+    padding: 18px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .blur {
+    top: 80%;
+    left: 35%;
+  }
+  .blur1 {
+    top: 125%;
+    left: 13%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .blur {
+    width: 13rem;
+    left: 38%;
+    top: 62%;
+  }
+  .blur1 {
+    top: 95%;
+    left: 10%;
+  }
+
+  #Intro-container {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .blur {
+    width: 13rem;
+    top: 85%;
+  }
+  .blur1 {
+    top: 135%;
+    left: 10%;
+  }
+
+  .right-image img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  .blur {
+    top: 95%;
+  }
+  .blur1 {
+    top: 135%;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .blur {
+    width: 8rem;
+    top: 65%;
+  }
+  .blur1 {
+    width: 13rem;
+    top: 95%;
+  }
+
+  .I-name > :nth-child(1) {
+    font-size: 2rem;
+  }
+
+  .I-name > :nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .I-name > :nth-child(3) {
+    font-size: 0.8rem;
+  }
+
+  .button1 {
+    padding: 12px;
+    font-size: 0.8rem;
+  }
+
+  #Intro-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
