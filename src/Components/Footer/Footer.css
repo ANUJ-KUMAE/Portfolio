@@ -172,6 +172,23 @@
   }
 }
 
+@media screen and (max-width:920px){
+  .F-container::before 
+  {
+     width: 200px;
+     height: 200px;
+  }
+}
+
+@media screen and (max-width:790px)
+{
+  .F-container::before 
+  {
+      width: 100px;
+      height: 100px;
+  }  
+}
+
 @media screen and (max-width: 550px) {
   .F-list {
     display: flex;
@@ -199,6 +216,13 @@
 }
 
 @media screen and (max-width: 480px) {
+
+  .F-container::before  
+  {
+     width: 0;
+     height: 0;
+  }
+  
   .footer-nav-list ul {
     padding: 0 1rem;
     margin: 0 auto;
