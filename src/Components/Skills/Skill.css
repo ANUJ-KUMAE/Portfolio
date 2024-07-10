@@ -1,0 +1,377 @@
+#S-container
+{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2.5rem 4.5rem;
+    margin: 2rem 2rem;
+    box-shadow: 25px 0 20px -20px rgba(96, 82, 161, 0.8), -25px 0 20px -20px rgba(96, 82, 161, 0.8);
+    border-radius: 2rem;
+    
+}
+
+.S-left
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.S-left p
+{
+    font-size: 1.2rem;
+}
+
+.S-left h1
+{
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--black);
+    margin: 0;
+}
+
+.S-right
+{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    margin: auto;
+}
+
+.S-right ul li
+{
+    list-style-type: none;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+
+.right-left-Skill ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+     border: 4px solid var(--yellow);
+     border-radius: 20px;
+     padding: 1rem;
+}
+
+.right-skill ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 4px solid var(--yellow);
+    border-radius: 20px;
+    padding: 1.8rem;
+    margin-top: 20%;
+}
+
+.tools-used ul 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+     border: 4px solid var(--yellow);
+     border-radius: 20px;
+     padding: 1rem;
+     margin-top: 100%;
+}
+
+.list-box, 
+.list-box1,
+.list-box2
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list-icons,
+.list-icons1
+{
+    font-size: 2rem;
+}
+
+
+.blur2
+{
+    position: absolute;
+    width: 25rem;
+    height: 15rem;
+    z-index: -8;
+    background: #99FFFF;
+    top: 105%;
+    left:50%;
+    filter: blur(72px);
+}
+
+.blur5
+{
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    z-index: -8;
+    background: #d73684;
+    top: 105%;
+    left:15%;
+    filter: blur(72px);
+}
+
+.button2
+{
+    margin-left: 0;
+    padding: 10px 20px;
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: var(--black) 0.3s, opacity 0.5s, visibility 0.5s;
+    animation: spineer 2s infinite;
+}
+
+@keyframes spineer {
+    from {
+      box-shadow: 0 0 0 0 rgba(255, 161, 34, 0.99);
+    }
+    to {
+      box-shadow: 0 0 0 45px rgba(255, 161, 34, 0.01);
+    }
+  }
+
+
+
+
+/* ---------------------------ResPonsive--------------------------*/
+
+@media screen and (max-width:1050px)
+{
+      
+    .S-right
+    {
+        margin-left: 0;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .blur2
+    {
+        width: 22rem;
+        height: 10rem;
+        top: 48rem;
+        left: 52%;
+    }
+
+    .blur5
+    {
+        width: 13rem;
+        height: 13rem;
+        left: 4rem;
+        top: 52%;
+    }
+    #S-container
+    {
+        padding: 2.5rem;
+        
+    }
+    .right-left-Skill
+    {
+        height: 55%;
+    }
+    .right-skill
+    {
+        height: 58%;
+    }  
+    
+    .S-right ul li
+    {
+        font-size: 1.2rem;
+    }
+
+}
+
+
+@media screen and (max-width:915px)
+{
+    #S-container
+    {
+        padding: 1.5rem;
+        
+    }    
+}
+
+
+ @media screen and (max-width: 840px)
+ {
+     .blur2
+     {
+        width: 20rem;
+        height: 12rem;
+        top: 95rem;
+        left: 15rem;
+     }  
+     
+     .blur5
+     {
+        width: 12rem;
+        height: 12rem;
+        top: 72rem;
+        left: 40%;
+     }
+
+     #S-container
+     {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .S-left 
+     {
+        text-align: center;
+     }
+
+     .S-right 
+     {
+        margin: auto;
+     }
+    
+     .button2
+     {
+        margin-left: 1rem;
+        padding: 1rem;
+        margin-bottom: 0.8rem;
+     }
+
+
+ } 
+
+@media screen and (max-width:770px)
+{
+     .blur2
+     {
+        top: 90rem;
+     }    
+}
+
+@media screen and (max-width:550px)
+{
+    .S-right
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .S-left h1 
+    {
+        font-size: 2rem;
+    }
+
+    .blur2
+    {
+        top: 95rem;
+        left: 8rem;
+    }
+
+    .blur5
+    {
+        top: 70rem;
+        left: 38%;
+    }
+
+    .button2 
+    {
+        font-size: 1rem;
+    }
+
+    .S-right ul li 
+    {
+        font-size: 1rem;
+    }
+
+    .right-skill ul,
+    .tools-used ul
+    {
+         margin-top: 0;
+    }
+    
+}
+
+@media screen and (max-width:450px)
+{
+    .blur2
+    {
+        width: 15rem;
+        left: 5rem;
+    }  
+    
+    #S-container 
+    {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media screen and (max-width:380px)
+{
+    .blur2
+    {
+        width: 13rem;
+    } 
+}
+
+@media screen and (max-width:290px)
+{
+    .blur2
+    {
+        width: 10rem;
+        top: 75rem;
+    }
+    .blur5
+    {
+
+        left: 30%;
+        top: 55rem;
+    }     
+    #S-container 
+    {
+        padding: 1rem;
+        box-shadow: none;
+        margin: 1rem ;
+    }
+
+    .right-left-Skill,
+    .right-skill
+    {
+        padding: 0.5rem;
+    }
+
+    .S-right ul li 
+    {
+        font-weight: 600;
+    }
+
+    .S-left p 
+    {
+        font-size: 0.8rem;
+    }
+
+    .right-skill .list-icons1 
+    {
+        font-size: 1.8rem;
+    }
+    
+    .button2 
+    {
+        font-size: 0.8rem;
+    }
+}

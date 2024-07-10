@@ -1,0 +1,276 @@
+.F-container {
+  background: #211e39;
+  overflow: hidden;
+  position: relative;
+}
+
+.F-container::before {
+  content: "";
+  position: absolute;
+  width: 286px;
+  height: 288px;
+  top: 0;
+  left: 0;
+  background: url(../../Images/footer-left-dotted-img.png) no-repeat top left;
+  opacity: 0.8;
+}
+
+.footer-nav-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.footer-nav-list ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: -2.5rem; */
+}
+
+.footer-nav-list li {
+  list-style-type: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.footer-nav-list li a {
+  text-decoration: none;
+  display: block;
+}
+
+.footer-nav-list li a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+.footer-nav-list hr {
+  height: 1rem;
+}
+
+.footer-nav-items .between-line {
+  width: 50%;
+  margin: 2rem 0;
+}
+
+.F-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.F-container h3,
+.F-right {
+  color: var(--yellow);
+}
+
+.F-left h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.F-right .linkdin,
+.github,
+.facebook {
+  font-size: 3rem;
+  margin-top: 10px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--yellow);
+  transition: transform 0.3s ease;
+}
+
+.F-right .linkdin:hover {
+  color: #0077b5;
+  transform: translateY(-8px);
+}
+
+.F-right .github:hover {
+  color: rgb(108, 198, 68);
+  transform: translateY(-8px);
+}
+
+.F-right .facebook:hover {
+  color: #1877f2;
+  transform: translateY(-8px);
+}
+
+#button {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 57px;
+  right: 60px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: spineer 2s infinite;
+  animation: spineer 2s infinite;
+}
+@-webkit-keyframes spineer {
+  from {
+    box-shadow: 0 0 0 0 rgba(255, 161, 34, 0.99);
+  }
+  to {
+    box-shadow: 0 0 0 45px rgba(255, 161, 34, 0.01);
+  }
+}
+
+@keyframes spineer {
+  from {
+    box-shadow: 0 0 0 0 rgba(255, 161, 34, 0.99);
+  }
+  to {
+    box-shadow: 0 0 0 45px rgba(255, 161, 34, 0.01);
+  }
+}
+
+.arrow-icon 
+{
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    margin-left: 0.1rem;
+}
+
+#button::after {
+    content: "";
+    font-family: "Font Awesome 5 pro";
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 50px;
+    color: #fff;
+  }
+
+  #button:active {
+    background-color: #555;
+  }
+
+
+/*--------Responsive-------*/
+
+@media screen and (max-width: 1050px) {
+  .F-right .linkdin,
+  .github,
+  .facebook {
+    font-size: 3rem;
+  }
+  .F-container h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width:920px){
+  .F-container::before 
+  {
+     width: 200px;
+     height: 200px;
+  }
+}
+
+@media screen and (max-width:790px)
+{
+  .F-container::before 
+  {
+      width: 100px;
+      height: 100px;
+  }  
+}
+
+@media screen and (max-width: 550px) {
+  .F-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer-nav-items .between-line {
+    margin: 1rem 0;
+  }
+
+  .footer-nav-list ul li {
+    font-size: 1rem;
+  }
+
+  .F-left h3 {
+    font-size: 1rem;
+  }
+
+  #button 
+  {
+    right: 45px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .footer-nav-list ul {
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+
+  .F-container::before  
+  {
+     width: 0;
+     height: 0;
+  }
+
+  #button 
+  {
+     right: 30px;
+     bottom: 50px;
+     width: 60px;
+     height: 60px;
+  }
+
+  .arrow-icon 
+  {
+    margin: 0.8rem 0.9rem;
+  }
+
+  .footer-nav-list hr {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+
+
+  .footer-nav-list hr {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 290px) {
+
+
+  .footer-nav-list ul li a,
+  .F-container h3 {
+    font-size: 0.7rem;
+  }
+
+  .F-right .linkdin,
+  .F-right .facebook,
+  .F-right .github {
+    font-size: 2rem;
+  }
+
+  #button 
+  {
+     right: 20px;
+  }
+}

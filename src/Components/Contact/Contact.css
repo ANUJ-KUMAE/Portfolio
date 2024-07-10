@@ -1,0 +1,199 @@
+#contact-container
+{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.c-contact
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    padding: 2.5rem;
+}
+
+.c-left
+{
+    display: flex;
+    justify-content: center;
+}
+
+.c-left img
+{
+    height: 85%;
+    width: 85%;
+} 
+
+.pop-image {
+    
+    animation: spinForwardAndBackward 5s linear infinite alternate;; /* Animation duration and type */
+  }
+  
+  @keyframes spinForwardAndBackward {
+    0% {
+      transform: rotate(0deg); /* Starting rotation angle */
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg); /* Ending rotation angle */
+    }
+  }
+  
+  
+
+
+.c-right
+{
+    margin:auto 0;
+}
+
+.c-right h1{
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+.c-right input
+{ 
+    
+    width: 40%;
+    padding: 20px;
+    margin: 3px;
+    border-radius: 15px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.c-right input:focus
+{
+    background: rgba(255, 255, 255, 1);
+    color: #121212;
+}
+
+
+.c-right input::placeholder
+{
+    color: white;
+    font-size: 1rem;
+}
+
+.c-right textarea
+{
+
+    max-width: 90%;
+    width: 80.5%;
+    background: none;
+    margin-top: 0.5rem;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+.c-right textarea::placeholder
+{
+    color: white;
+    font-size: 1rem;
+
+}
+
+.c-right textarea:focus
+{
+    background: rgba(255, 255, 255, 1);
+    color: #121212;
+}
+
+.c-right .Submit
+{
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+
+/*------responsive------*/
+
+@media screen and (max-width:1050px)
+{
+    
+
+    .c-right textarea 
+    {
+        width: 81%;
+    }
+
+    .pop-image 
+    {
+        animation: none;
+    }
+    
+} 
+
+
+ @media screen and (max-width: 840px) 
+{ 
+    .c-contact
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+} 
+
+
+
+@media screen and (max-width:550px)
+{
+
+     .c-right input 
+     {
+        font-size: 1rem;
+     }
+    
+     .c-right h1 
+     {
+        font-size: 2rem;
+     }
+
+     .c-contact 
+     {
+        padding: 2.5rem 1.5rem;
+     }
+
+     .c-right .Submit 
+     {
+         font-size: 0.9rem;
+     }
+}
+
+@media screen and (max-width:450px)
+{
+    .c-right textarea
+    {
+        width: 83.8%;
+        
+    } 
+     
+     .c-right input 
+     {
+        width: 83.9%;
+     }
+}
+
+@media screen and (max-width:290px)
+{
+    
+    .c-right textarea 
+    {
+        margin-top: 0.2rem;
+    }
+}
